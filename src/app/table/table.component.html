@@ -1,0 +1,39 @@
+<div class="container-fluid navbar-dark bg-dark">Отсканируйте ШК товара который забираете с паллета
+  <form class="d-flex">
+    <input class="form-control" placeholder="ШК или локальный код" 
+      [(ngModel)]="this.input" 
+      [ngModelOptions]="{standalone: true}"
+    >
+    <button class="button_lupa" type="button" 
+      (click)="services_data.calculator_on=true;
+      poisk_tovara()">
+    </button>
+    <button class="button_krest" type="reset"></button>
+  </form>
+</div>
+
+<div class="table" *ngFor="let item of all_items; first as first_id">
+  <div class="table_row" [class.table_row_switch]="highlight_item && first_id">
+    <div class="table_large_div">{{item.id}}-{{item.name}}</div>
+    <div class="table_small_div">
+      <button class="button_krest2" type="button" (click)="remove_prin_kol(item.name)"></button>
+    </div>
+  </div>
+  <div  class="table_row" [class.table_row_switch]="highlight_item && first_id">
+    <div class="table_middle_div">
+      {{first_id && highlight_item?(services_data.date|date:'dd-MM-yy'):''}}
+    </div> 
+    <div class="table_middle_div">{{item.amount}} &#8594;{{item.edit_amount}}</div>
+    <div class="table_small_div">шт</div>
+  </div>
+</div>
+
+<div class="d-grid">
+  <button type="button" class="btn_back" routerLink="/" >Назад</button>
+</div>
+
+<app-calculator
+  *ngIf="services_data.calculator_on"
+  (close)="services_data.calculator_on=false"
+>
+</app-calculator>

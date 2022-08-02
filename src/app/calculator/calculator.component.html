@@ -1,0 +1,41 @@
+<div class="fon_calculator">
+   <div class="calculator">{{services_data.calculator_title}}
+      <div class="calculator_row_top">
+         <div type="text" class="input" value="0">{{input_calculator}}</div>
+         <button type="button" class="button_all" (click)="Clear()">&#11176;</button>
+      </div>
+      <div class="calculator_row_main">
+         <button type="button" class="button_all" (click)="pressNum('1')">1</button>
+         <button type="button" class="button_all" (click)="pressNum('2')">2</button>
+         <button type="button" class="button_all" (click)="pressNum('3')">3</button>
+         <button type="button" class="button_all">+</button>
+      </div>
+      <div class="calculator_row_main">
+         <button type="button" class="button_all" (click)="pressNum('4')">4</button>
+         <button type="button" class="button_all" (click)="pressNum('5')">5</button>
+         <button type="button" class="button_all" (click)="pressNum('6')">6</button>
+         <button type="button" class="button_all">-</button>
+      </div>
+      <div class="calculator_row_main">
+         <button type="button" class="button_all" (click)="pressNum('7')">7</button>
+         <button type="button" class="button_all" (click)="pressNum('8')">8</button>
+         <button type="button" class="button_all" (click)="pressNum('9')">9</button>
+         <button type="button" class="button_all">*</button>
+      </div>
+      <div class="calculator_row_main">
+         <button type="button" class="button_visibility"></button>
+         <button type="button" class="button_all" (click)="pressNum('0')">0</button>
+         <button type="button" class="button_visibility"></button>
+         <button type="button" class="button_all">/</button>
+      </div>
+      <div class="calculator_row_bottom">
+         <button type="button" class="button_accept"
+            (click)="services_data.calculator_on=false;
+            result_calculate()">Принять
+         </button>
+         <button type="button" class="button_cancel" 
+            (click)="services_data.calculator_on=false">Отмена
+         </button>
+      </div>
+   </div>
+</div>

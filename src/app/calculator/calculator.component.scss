@@ -1,0 +1,118 @@
+.fon_calculator{
+   position:absolute;
+   top:0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background:rgba(0, 0, 0, .4);
+}
+.calculator {
+   word-wrap: break-word;
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, 50%);
+   width: 250px;
+   height: 278px;
+   background:rgb(48, 47, 47);
+   padding: 5px 2px;
+   color: rgb(255, 255, 255);
+   border-width: 2px;
+   border-style: solid;
+   border-color: rgb(3, 3, 3);
+   font-size: 12px;
+}
+.calculator_row_top {
+   display: flex;
+   justify-content: left;
+   background:rgb(48, 47, 47);
+   border-top-color: #585858;
+   border-top-style: solid; 
+   border-top-width: 1px;
+   padding: 10px 15px;
+   margin: 5px;
+}
+.calculator_row_main {
+   display: flex;
+   justify-content: left;
+   background:rgb(48, 47, 47);
+   padding:  0px 15px;
+   border: none; 
+   margin: 5px;
+}
+.calculator_row_bottom {
+   display: flex;
+   justify-content: right;
+   background:rgb(48, 47, 47);
+   border-top-color: #585858;
+   border-top-style: solid; 
+   border-top-width: 1px;
+   padding:  10px 15px;
+   margin: 5px;
+}
+.input{
+   word-wrap: break-word;
+   text-align: left;
+   max-width: 100%;
+   max-height: 100%;
+   color: white;
+   background:rgb(82, 81, 81);
+   width: 126.5px;
+   padding: 0px 5px;
+   margin: 2px 5px;
+   border-radius: 2px;
+   border: none;
+}
+.button_all{
+   max-width: 100%;
+   max-height: 100%;
+   color: white;
+   background:rgb(82, 81, 81);
+   width: 50px;
+   margin: 2px 7px;
+   border-radius: 2px;
+   border: none;
+}
+.button_all:hover{
+   background:rgb(117, 115, 115);
+}
+.button_accept{
+   font-size: smaller;
+   max-width: 100%;
+   max-height: 100%;
+   color: white;
+   background:rgb(22, 90, 194);
+   width: 65px;
+   height: 25px;
+   margin: 0px 5px;
+   border-radius: 2px;
+   border: none;
+}
+.button_accept:hover{
+   background:rgb(36, 109, 218);
+}
+.button_cancel{
+   font-size: smaller;
+   max-width: 100%;
+   max-height: 100%;
+   color: white;
+   background:rgb(82, 81, 81);
+   width: 65px;
+   height: 25px;
+   margin: 0px 5px;
+   border-radius: 2px;
+   border: none;
+}
+.button_cancel:hover{
+   background:rgb(117, 115, 115);
+}
+.button_visibility {
+   max-width: 100%;
+   max-height: 100%;
+   color: white;
+   background:rgb(82, 81, 81);
+   width: 50px;
+   margin: 2px 7px;
+   border-radius: 2px;
+   border: none;
+   visibility: hidden;
+}

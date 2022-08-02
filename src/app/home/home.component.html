@@ -1,0 +1,10 @@
+<div class="container-fluid navbar-dark bg-dark">Выбрать подтверждение заказа
+   <form class="d-flex">
+      <input class="form-control" placeholder="Поиск" type="text"
+      [(ngModel)]="this.services_data.number_order" 
+      [ngModelOptions]="{standalone: true}"
+      >
+      <button class="button_lupa" type="button" routerLink="/table"></button>
+      <button class="button_krest" type="reset"></button>
+   </form>
+</div>
