@@ -15,6 +15,7 @@ export class TableComponent {
   input:any="";
   all_items:Item[]=[];
   highlight_item:boolean=false;
+  date=new Date()
 
   constructor(public services_data : services_data) { //1 экспорт json(папка assets), 2 триггер с калькулятора public result_calculate()
     this.services_data.getJSON().subscribe((data) => (this.all_items = data[this.services_data.number_order]))
@@ -39,7 +40,6 @@ export class TableComponent {
         item.edit_amount=this.services_data.calculate_result
         this.all_items = this.all_items.filter(item=>item.name!=this.services_data.calculator_title)
         this.all_items.unshift(item)
-        this.services_data.date=new Date()
         this.highlight_item=true
       }
     }
