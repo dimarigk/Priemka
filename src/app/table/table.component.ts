@@ -41,6 +41,7 @@ export class TableComponent {
         this.all_items = this.all_items.filter(item=>item.name!=this.services_data.calculator_title)
         this.all_items.unshift(item)
         this.highlight_item=true
+        this.input="";
       }
     }
   }
