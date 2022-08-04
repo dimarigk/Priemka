@@ -22,7 +22,7 @@ export class TableComponent {
     this.services_data.translit.subscribe((data)=>{this.edit_spisok();})  
   }
   
-  poisk_tovara() { //поиск по ШК
+  find_item() { //поиск по ШК
     for (let item of this.all_items) {
       if(item.id==this.input){
         this.services_data.calculator_title=item.name
@@ -34,7 +34,7 @@ export class TableComponent {
     }
   }
 
-  edit_spisok() { //выделить товар, отобразить первым
+  edit_list() { //выделить товар, отобразить первым
     for (let item of this.all_items) {
       if(item.name == this.services_data.calculator_title){
         item.edit_amount=this.services_data.calculate_result
@@ -45,7 +45,7 @@ export class TableComponent {
     }
   }
 
-  remove_prin_kol(id){ //снять выделение, очистить принятое количество
+  remove_edit_amount(id){ //снять выделение, очистить принятое количество
     // this.vse_tovars = this.vse_tovars.filter(tovar=>tovar.nazvanie!=id) - вариант удаления из списка
     for (let item of this.all_items) {
       if(item.name==id){
