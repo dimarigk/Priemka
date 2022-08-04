@@ -6,7 +6,6 @@ import { Subject } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class services_data {
-    date:any = "";
     translit = new Subject();
     number_order:string="F2200050114"; //должен быть пустым
     calculator_on:boolean=false;
