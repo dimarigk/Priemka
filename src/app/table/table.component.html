@@ -6,7 +6,7 @@
     >
     <button class="button_lupa" type="button" 
       (click)="services_data.calculator_on=true;
-      poisk_tovara()">
+      find_item()">
     </button>
     <button class="button_krest" type="reset"></button>
   </form>
@@ -16,7 +16,7 @@
   <div class="table_row" [class.table_row_switch]="highlight_item && first_id">
     <div class="table_large_div">{{item.id}}-{{item.name}}</div>
     <div class="table_small_div">
-      <button class="button_krest2" type="button" (click)="remove_prin_kol(item.name)"></button>
+      <button class="button_krest2" type="button" (click)="remove_edit_amount(item.name)"></button>
     </div>
   </div>
   <div  class="table_row" [class.table_row_switch]="highlight_item && first_id">
