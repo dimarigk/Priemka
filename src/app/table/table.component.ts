@@ -19,7 +19,7 @@ export class TableComponent {
 
   constructor(public services_data : services_data) { //1 экспорт json(папка assets), 2 триггер с калькулятора public result_calculate()
     this.services_data.getJSON().subscribe((data) => (this.all_items = data[this.services_data.number_order]))
-    this.services_data.translit.subscribe((data)=>{this.edit_spisok();})  
+    this.services_data.translit.subscribe((data)=>{this.edit_list();})  
   }
   
   find_item() { //поиск по ШК
