@@ -21,7 +21,7 @@
   </div>
   <div  class="table_row" [class.table_row_switch]="highlight_item && first_id">
     <div class="table_middle_div">
-      {{first_id && highlight_item?(services_data.date|date:'dd-MM-yy'):''}}
+      {{first_id && highlight_item?(date|date:'dd-MM-yy'):''}}
     </div> 
     <div class="table_middle_div">{{item.amount}} &#8594;{{item.edit_amount}}</div>
     <div class="table_small_div">шт</div>
